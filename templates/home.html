@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    h1 { font-family:"Helvetica"; }
+    h3 { font-family:"Helvetica"; }
+    p { font-family:"Helvetica"; }
+    div {background-color: lightgrey;
+    width: 800px;
+    border: 0px solid blue;
+    padding: 20px;
+    margin: 0px;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
-    <title>WEATHER DATA API</title>
+    <title>Weather Data API</title>
 </head>
 <body>
-    <h1>Weather Data API</h1>
-    <p>URL format: http://127.0.0.1:5000/api/v1/station/date</p>
-    <h2>How to query?</h2>
-    <p>For one station at one date: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
-    <p>For one station for all dates: http://127.0.0.1:5000/api/v1/10</p>
-    <p>For one station for one year: http://127.0.0.1:5000/api/v1/yearly/10/1988</p>
+    <img src="{{url_for('static', filename='weather_symbol.png')}}" style="width:50px">
+    <h1>WEATHER DATA API</h1>
+    <div>
+        <p>URL format: http://127.0.0.1:5000/api/v1/station/date</p>
+        <h3>How to query?</h3>
+        <p>For one station at one date: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
+        <p>For one station for all dates: http://127.0.0.1:5000/api/v1/10</p>
+        <p>For one station for one year: http://127.0.0.1:5000/api/v1/yearly/10/1988</p>
+    </div>
     <p>{{data|safe}}</p>
 </body>
 </html>
